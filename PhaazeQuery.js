@@ -428,7 +428,7 @@ class PhaazeQuery {
     }
     var finished_list = [];
     for (var k in new_node_list) {
-      if ( this.result.indexOf(new_node_list[k]) < 0) { finished_list.push(new_node_list[k]) }
+      if ( Array.prototype.indexOf.call(this.result, new_node_list[k]) < 0) { finished_list.push(new_node_list[k]) }
     }
     var nPQ = new PhaazeQuery();
     nPQ.result = finished_list;
